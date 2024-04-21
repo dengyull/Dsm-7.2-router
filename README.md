@@ -54,7 +54,7 @@ sh /volume1/homes/nat.sh restart
 
 ## Step 4: Enabling Port Forwarding
 
-Port forwarding allows you to direct internet traffic to specific devices on your network.
+Port forwarding allows you to direct internet traffic to specific devices on your network. This example shows how to expose the 192.168.10.10 transmission torrent port to the outside world.
 
 ### Port Forward Script in Task Scheduler
 
@@ -62,7 +62,6 @@ Port forwarding allows you to direct internet traffic to specific devices on you
 iptables -t nat -F DEFAULT_PREROUTING
 iptables -t nat -A PREROUTING -p tcp --dport 51415 -j DNAT --to-destination 192.168.10.10:51415
 iptables -t nat -A PREROUTING -p udp --dport 51415 -j DNAT --to-destination 192.168.10.10:51415
-
 ```
 
 
