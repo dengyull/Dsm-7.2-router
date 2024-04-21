@@ -35,21 +35,18 @@ Once installed, you can configure the DHCP server to handle IP distribution:
 
 ### Configuration Steps
 
-1. **Open Control Panel**:
-   - Navigate to `Control Panel` from the main menu.
+1. **Access DHCP Server Settings**:
+   - Navigate to `DHCP Server` from the main menu.
 
-2. **Access DHCP Server Settings**:
-   - Click on `DHCP Server` under the `Network Services` section.
-
-3. **Enable and Configure DHCP**:
+2. **Enable and Configure DHCP**:
    - Enable the DHCP Server by checking the appropriate box.
    - Configure your IP range, subnet mask, gateway, and other network settings.
 
 ## Step 3: Setting Up NAT
 
-Use the following script to set up Network Address Translation (NAT) on your NAS:
+Use the `nat.sh` script to set up Network Address Translation (NAT) on your NAS,Save `nat.sh` in your preferred path, in the example here it is saved in the homes folder.
 
-### NAT Script in Task Scheduler
+### Setup NAT Script in Task Scheduler
 
 ```bash
 sh /volume1/homes/nat.sh restart
